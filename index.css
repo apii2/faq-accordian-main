@@ -32,17 +32,32 @@ html, body{
   background-position: 0% -4%;
   background-repeat: no-repeat;
   background-color: var(--light-pink-hsl);
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@media (max-width: 23.4375rem) {
+  .app{
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-size: auto 29%;
+    background-position: 0% 0%;
+  }
+}
+
 main{
   width: 41%;
   background-color: var(--white-hsl);
-  padding: 2rem 2rem 0;
+  padding: 2rem;
   border-radius: 0.8rem;
+  box-shadow: 1px 6px 20px var(--grayish-purple-hsl);
+}
+
+@media (max-width: 23.4375rem) {
+  main{
+    width: 87%;
+    padding: 1.5rem;
+  }
 }
 
 main h1{
@@ -52,14 +67,34 @@ main h1{
   margin-bottom: 1.4rem;
 }
 
+@media (max-width: 23.4375rem) {
+  main h1{
+    font-size: 2rem;
+  }
+}
+
 main h1 img{
   width: 2.2rem;
   height: 2.2rem;
   margin-right: 1.5rem;
 }
 
+@media (max-width: 23.4375rem) {
+  main h1 img{
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+main div{
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
 section{
-  margin-bottom: 2.6rem;
+  display: grid;
+  row-gap: 1.2rem;
 }
 
 section header button {
@@ -67,10 +102,18 @@ section header button {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  text-align: left;
   background-color: transparent;
   border: none;
-  margin-bottom: 1.2rem;
   font-weight: 600;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 23.4375rem) {
+  section header button{
+    gap: 2rem;
+    font-size: 1rem;
+  }
 }
 
 section header button:hover{
@@ -82,4 +125,11 @@ section p{
   display: none;
   color: var(--grayish-purple-hsl);
   font-weight: 400;
+  line-height: 1.3rem;
+}
+
+@media (max-width: 23.4375rem) {
+  section p{
+    font-size: 0.875rem;
+  }
 }
